@@ -8,6 +8,8 @@
 
 #import "PPViewController.h"
 
+#import "PPFlickInterface.h"
+
 @interface PPViewController ()
 
 @end
@@ -18,6 +20,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    PPFlickInterface *client = [[PPFlickInterface alloc] init];
+    
+    [client searchFlickForTerm:@"dog" completionBlock:^(NSString *searchTerm, NSArray *results, NSError *error) {
+        NSLog(@"count:%d", [results count]);
+    }];
 }
 
 - (void)didReceiveMemoryWarning
