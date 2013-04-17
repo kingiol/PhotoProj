@@ -34,6 +34,9 @@
 		62AAA17A171E44D30068459C /* PPFlickrEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 62AAA179171E44D30068459C /* PPFlickrEngine.m */; };
 		62AAA17E171E453D0068459C /* PPFlickrPhotoInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 62AAA17D171E453D0068459C /* PPFlickrPhotoInfo.m */; };
 		62AAA181171E465B0068459C /* PPFlickInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 62AAA180171E465B0068459C /* PPFlickInterface.m */; };
+		62AAA18E171E993F0068459C /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 62AAA18B171E993F0068459C /* SVProgressHUD.bundle */; };
+		62AAA18F171E993F0068459C /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 62AAA18D171E993F0068459C /* SVProgressHUD.m */; };
+		62AAA191171E99690068459C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62AAA190171E99690068459C /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +86,10 @@
 		62AAA17D171E453D0068459C /* PPFlickrPhotoInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPFlickrPhotoInfo.m; sourceTree = "<group>"; };
 		62AAA17F171E465B0068459C /* PPFlickInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPFlickInterface.h; sourceTree = "<group>"; };
 		62AAA180171E465B0068459C /* PPFlickInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPFlickInterface.m; sourceTree = "<group>"; };
+		62AAA18B171E993F0068459C /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		62AAA18C171E993F0068459C /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		62AAA18D171E993F0068459C /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		62AAA190171E99690068459C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62AAA191171E99690068459C /* QuartzCore.framework in Frameworks */,
 				627A87CC171E2BA700E51ADB /* Security.framework in Frameworks */,
 				627A87CA171E2B9A00E51ADB /* SystemConfiguration.framework in Frameworks */,
 				627A87C7171E2B9200E51ADB /* CFNetwork.framework in Frameworks */,
@@ -173,6 +181,7 @@
 		628CD545171DA3CE007918E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				62AAA190171E99690068459C /* QuartzCore.framework */,
 				627A87CB171E2BA700E51ADB /* Security.framework */,
 				627A87C9171E2B9A00E51ADB /* SystemConfiguration.framework */,
 				627A87C6171E2B9200E51ADB /* CFNetwork.framework */,
@@ -216,6 +225,7 @@
 		628CD569171DA4A9007918E9 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				62AAA18A171E993F0068459C /* SVProgressHUD */,
 				627A87CD171E2C8800E51ADB /* MKNetworkKit */,
 			);
 			name = ThirdParty;
@@ -240,6 +250,16 @@
 				62AAA180171E465B0068459C /* PPFlickInterface.m */,
 			);
 			name = flickr;
+			sourceTree = "<group>";
+		};
+		62AAA18A171E993F0068459C /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				62AAA18B171E993F0068459C /* SVProgressHUD.bundle */,
+				62AAA18C171E993F0068459C /* SVProgressHUD.h */,
+				62AAA18D171E993F0068459C /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +319,7 @@
 				628CD55B171DA3CE007918E9 /* Default@2x.png in Resources */,
 				628CD55D171DA3CE007918E9 /* Default-568h@2x.png in Resources */,
 				628CD560171DA3CE007918E9 /* MainStoryboard.storyboard in Resources */,
+				62AAA18E171E993F0068459C /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +346,7 @@
 				62AAA17A171E44D30068459C /* PPFlickrEngine.m in Sources */,
 				62AAA17E171E453D0068459C /* PPFlickrPhotoInfo.m in Sources */,
 				62AAA181171E465B0068459C /* PPFlickInterface.m in Sources */,
+				62AAA18F171E993F0068459C /* SVProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
