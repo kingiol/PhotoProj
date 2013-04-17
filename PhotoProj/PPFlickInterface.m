@@ -38,6 +38,7 @@
                 photo.server = [objPhoto[@"server"] intValue];
                 photo.secret = objPhoto[@"secret"];
                 photo.photoID = [objPhoto[@"id"] longLongValue];
+                photo.tiltle = objPhoto[@"title"];
                 
                 [PPFlickInterface loadImageForPhoto:photo thumbnail:YES completionBlock:nil];
                 
@@ -64,7 +65,9 @@
         }else {
             info.largeImage = image;
         }
-        completionBlock(image, nil);
+        if (completionBlock) {
+            completionBlock(image, nil);
+        }
     } callErrorBlock:nil];
     
 }

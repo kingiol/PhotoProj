@@ -17,5 +17,6 @@
 @synthesize farm = _farm;
 @synthesize server = _server;
 @synthesize secret = _secret;
+@synthesize tiltle = _tiltle;
 
 @end

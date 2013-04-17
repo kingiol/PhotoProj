@@ -29,7 +29,7 @@
 
 - (void)sendRequestPath:(NSString *)path withParams:(NSDictionary *)params callSuccessBlock:(callSuccessBlock)successBlock callErrorBlock:(callErrorBlock)errorBlock {
     
-    MKNetworkOperation *operation = [self operationWithPath:path params:params httpMethod:@"GET"];
+    MKNetworkOperation *operation = [self operationWithPath:path params:params httpMethod:@"POST"];
     
     [operation addCompletionHandler:^(MKNetworkOperation *completedOperation) {
         id dict = [completedOperation responseJSON];
@@ -47,8 +47,6 @@
     [self enqueueOperation:operation];
 }
 
-
-
 - (void)loadImageForPhoto:(PPFlickrPhotoInfo *)photo withURLStr:(NSString *)imageURL callSuccessBlock:(callSuccessBlock)successBlock callErrorBlock:(callErrorBlock)errorBlock {
     
     MKNetworkOperation *operation = [self operationWithURLString:imageURL params:nil httpMethod:@"GET"];
@@ -59,7 +57,9 @@
         successBlock(dict);
     } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
         DLog(@"%@", [error localizedDescription]);
-        errorBlock(error);
+        if (errorBlock) {
+            errorBlock(error);
+        }
     }];
     
     [self enqueueOperation:operation];

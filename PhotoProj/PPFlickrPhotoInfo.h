@@ -17,5 +17,6 @@
 @property (nonatomic, assign) NSInteger farm;
 @property (nonatomic, assign) NSInteger server;
 @property (nonatomic, strong) NSString *secret;
+@property (nonatomic, strong) NSString *tiltle;
 
 @end

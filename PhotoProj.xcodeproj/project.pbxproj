@@ -37,6 +37,7 @@
 		62AAA18E171E993F0068459C /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 62AAA18B171E993F0068459C /* SVProgressHUD.bundle */; };
 		62AAA18F171E993F0068459C /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 62AAA18D171E993F0068459C /* SVProgressHUD.m */; };
 		62AAA191171E99690068459C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62AAA190171E99690068459C /* QuartzCore.framework */; };
+		62CB470A171EF4C7009128C0 /* PPFlickrTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CB4709171EF4C7009128C0 /* PPFlickrTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +91,8 @@
 		62AAA18C171E993F0068459C /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		62AAA18D171E993F0068459C /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		62AAA190171E99690068459C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		62CB4708171EF4C7009128C0 /* PPFlickrTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPFlickrTableViewCell.h; sourceTree = "<group>"; };
+		62CB4709171EF4C7009128C0 /* PPFlickrTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPFlickrTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +206,8 @@
 				628CD55E171DA3CE007918E9 /* MainStoryboard.storyboard */,
 				628CD561171DA3CE007918E9 /* PPViewController.h */,
 				628CD562171DA3CE007918E9 /* PPViewController.m */,
+				62CB4708171EF4C7009128C0 /* PPFlickrTableViewCell.h */,
+				62CB4709171EF4C7009128C0 /* PPFlickrTableViewCell.m */,
 				628CD54D171DA3CE007918E9 /* Supporting Files */,
 			);
 			path = PhotoProj;
@@ -347,6 +352,7 @@
 				62AAA17E171E453D0068459C /* PPFlickrPhotoInfo.m in Sources */,
 				62AAA181171E465B0068459C /* PPFlickInterface.m in Sources */,
 				62AAA18F171E993F0068459C /* SVProgressHUD.m in Sources */,
+				62CB470A171EF4C7009128C0 /* PPFlickrTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
