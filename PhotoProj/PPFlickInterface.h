@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class PPFlickerPhotoInfo;
+@class PPFlickrPhotoInfo;
 
 typedef void (^FlickrSearchCompletionBlock)(NSString *searchTerm, NSArray *results, NSError *error);
 typedef void (^FlickrPhotoCompletionBlock)(UIImage *photoImage, NSError *error);
@@ -17,8 +17,8 @@ typedef void (^FlickrPhotoCompletionBlock)(UIImage *photoImage, NSError *error);
 
 - (void)searchFlickForTerm:(NSString *)term completionBlock:(FlickrSearchCompletionBlock)completionBlock;
 
-+ (void)loadImageForPhoto:(PPFlickerPhotoInfo *)flickrPhoto thumbnail:(BOOL)thumbnail completionBlock:(FlickrPhotoCompletionBlock)completionBlock;
++ (void)loadImageForPhoto:(PPFlickrPhotoInfo *)flickrPhoto thumbnail:(BOOL)thumbnail completionBlock:(FlickrPhotoCompletionBlock)completionBlock;
 
-+ (NSString *)flickrPhotoURLForFlickrPhoto:(PPFlickerPhotoInfo *)flickrPhoto size:(NSString *)size;
++ (NSString *)flickrPhotoURLForFlickrPhoto:(PPFlickrPhotoInfo *)flickrPhoto size:(NSString *)size;
 
 @end

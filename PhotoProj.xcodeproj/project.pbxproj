@@ -31,7 +31,7 @@
 		628CD55D171DA3CE007918E9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 628CD55C171DA3CE007918E9 /* Default-568h@2x.png */; };
 		628CD560171DA3CE007918E9 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 628CD55E171DA3CE007918E9 /* MainStoryboard.storyboard */; };
 		628CD563171DA3CE007918E9 /* PPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 628CD562171DA3CE007918E9 /* PPViewController.m */; };
-		62AAA17A171E44D30068459C /* PPMKNetworkEngineClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 62AAA179171E44D30068459C /* PPMKNetworkEngineClient.m */; };
+		62AAA17A171E44D30068459C /* PPFlickrEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 62AAA179171E44D30068459C /* PPFlickrEngine.m */; };
 		62AAA17E171E453D0068459C /* PPFlickrPhotoInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 62AAA17D171E453D0068459C /* PPFlickrPhotoInfo.m */; };
 		62AAA181171E465B0068459C /* PPFlickInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 62AAA180171E465B0068459C /* PPFlickInterface.m */; };
 /* End PBXBuildFile section */
@@ -77,8 +77,8 @@
 		628CD55F171DA3CE007918E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		628CD561171DA3CE007918E9 /* PPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPViewController.h; sourceTree = "<group>"; };
 		628CD562171DA3CE007918E9 /* PPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPViewController.m; sourceTree = "<group>"; };
-		62AAA178171E44D30068459C /* PPMKNetworkEngineClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPMKNetworkEngineClient.h; sourceTree = "<group>"; };
-		62AAA179171E44D30068459C /* PPMKNetworkEngineClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPMKNetworkEngineClient.m; sourceTree = "<group>"; };
+		62AAA178171E44D30068459C /* PPFlickrEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPFlickrEngine.h; sourceTree = "<group>"; };
+		62AAA179171E44D30068459C /* PPFlickrEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPFlickrEngine.m; sourceTree = "<group>"; };
 		62AAA17C171E453D0068459C /* PPFlickrPhotoInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPFlickrPhotoInfo.h; sourceTree = "<group>"; };
 		62AAA17D171E453D0068459C /* PPFlickrPhotoInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPFlickrPhotoInfo.m; sourceTree = "<group>"; };
 		62AAA17F171E465B0068459C /* PPFlickInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPFlickInterface.h; sourceTree = "<group>"; };
@@ -225,23 +225,15 @@
 			isa = PBXGroup;
 			children = (
 				62AAA17B171E45070068459C /* flickr */,
-				62AAA177171E44AB0068459C /* network */,
 			);
 			name = core;
-			sourceTree = "<group>";
-		};
-		62AAA177171E44AB0068459C /* network */ = {
-			isa = PBXGroup;
-			children = (
-				62AAA178171E44D30068459C /* PPMKNetworkEngineClient.h */,
-				62AAA179171E44D30068459C /* PPMKNetworkEngineClient.m */,
-			);
-			name = network;
 			sourceTree = "<group>";
 		};
 		62AAA17B171E45070068459C /* flickr */ = {
 			isa = PBXGroup;
 			children = (
+				62AAA178171E44D30068459C /* PPFlickrEngine.h */,
+				62AAA179171E44D30068459C /* PPFlickrEngine.m */,
 				62AAA17C171E453D0068459C /* PPFlickrPhotoInfo.h */,
 				62AAA17D171E453D0068459C /* PPFlickrPhotoInfo.m */,
 				62AAA17F171E465B0068459C /* PPFlickInterface.h */,
@@ -330,7 +322,7 @@
 				627A87EC171E2C8800E51ADB /* MKNetworkEngine.m in Sources */,
 				627A87ED171E2C8800E51ADB /* MKNetworkOperation.m in Sources */,
 				627A87EE171E2C8800E51ADB /* Reachability.m in Sources */,
-				62AAA17A171E44D30068459C /* PPMKNetworkEngineClient.m in Sources */,
+				62AAA17A171E44D30068459C /* PPFlickrEngine.m in Sources */,
 				62AAA17E171E453D0068459C /* PPFlickrPhotoInfo.m in Sources */,
 				62AAA181171E465B0068459C /* PPFlickInterface.m in Sources */,
 			);

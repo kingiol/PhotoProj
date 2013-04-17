@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PPFlickerPhotoInfo : NSObject
+@interface PPFlickrPhotoInfo : NSObject
 
 @property (nonatomic, strong) UIImage *thumbnail;
 @property (nonatomic, strong) UIImage *largeImage;

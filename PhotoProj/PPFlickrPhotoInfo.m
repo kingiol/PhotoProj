@@ -8,7 +8,7 @@
 
 #import "PPFlickrPhotoInfo.h"
 
-@implementation PPFlickerPhotoInfo
+@implementation PPFlickrPhotoInfo
 
 @synthesize thumbnail = _thumbnail;
 @synthesize largeImage = _largeImage;
