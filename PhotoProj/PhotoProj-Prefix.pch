@@ -12,6 +12,8 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 
+    #import <Social/Social.h>
+
     //ThirdParty
     #import "MKNetworkKit.h"
     #import "SVProgressHUD.h"

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		624A650A171FC1ED00A69E9D /* PPTableViewDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 624A6509171FC1ED00A69E9D /* PPTableViewDetailViewController.m */; };
+		624A650D171FC39100A69E9D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 624A650C171FC39100A69E9D /* Social.framework */; };
 		627A87C7171E2B9200E51ADB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 627A87C6171E2B9200E51ADB /* CFNetwork.framework */; };
 		627A87CA171E2B9A00E51ADB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 627A87C9171E2B9A00E51ADB /* SystemConfiguration.framework */; };
 		627A87CC171E2BA700E51ADB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 627A87CB171E2BA700E51ADB /* Security.framework */; };
@@ -41,6 +43,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		624A6508171FC1ED00A69E9D /* PPTableViewDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTableViewDetailViewController.h; sourceTree = "<group>"; };
+		624A6509171FC1ED00A69E9D /* PPTableViewDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTableViewDetailViewController.m; sourceTree = "<group>"; };
+		624A650C171FC39100A69E9D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		627A87C6171E2B9200E51ADB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		627A87C9171E2B9A00E51ADB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		627A87CB171E2BA700E51ADB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -100,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				624A650D171FC39100A69E9D /* Social.framework in Frameworks */,
 				62AAA191171E99690068459C /* QuartzCore.framework in Frameworks */,
 				627A87CC171E2BA700E51ADB /* Security.framework in Frameworks */,
 				627A87CA171E2B9A00E51ADB /* SystemConfiguration.framework in Frameworks */,
@@ -184,6 +190,7 @@
 		628CD545171DA3CE007918E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				624A650C171FC39100A69E9D /* Social.framework */,
 				62AAA190171E99690068459C /* QuartzCore.framework */,
 				627A87CB171E2BA700E51ADB /* Security.framework */,
 				627A87C9171E2B9A00E51ADB /* SystemConfiguration.framework */,
@@ -208,6 +215,8 @@
 				628CD562171DA3CE007918E9 /* PPViewController.m */,
 				62CB4708171EF4C7009128C0 /* PPFlickrTableViewCell.h */,
 				62CB4709171EF4C7009128C0 /* PPFlickrTableViewCell.m */,
+				624A6508171FC1ED00A69E9D /* PPTableViewDetailViewController.h */,
+				624A6509171FC1ED00A69E9D /* PPTableViewDetailViewController.m */,
 				628CD54D171DA3CE007918E9 /* Supporting Files */,
 			);
 			path = PhotoProj;
@@ -353,6 +362,7 @@
 				62AAA181171E465B0068459C /* PPFlickInterface.m in Sources */,
 				62AAA18F171E993F0068459C /* SVProgressHUD.m in Sources */,
 				62CB470A171EF4C7009128C0 /* PPFlickrTableViewCell.m in Sources */,
+				624A650A171FC1ED00A69E9D /* PPTableViewDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

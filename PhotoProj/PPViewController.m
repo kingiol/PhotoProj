@@ -11,6 +11,7 @@
 #import "PPFlickInterface.h"
 #import "PPFlickrTableViewCell.h"
 #import "PPFlickrPhotoInfo.h"
+#import "PPTableViewDetailViewController.h"
 
 @interface PPViewController () <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout> {
     NSArray *datasource;
@@ -127,14 +128,17 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSString *segueIdentifier = segue.identifier;
     if ([segueIdentifier isEqualToString:@"tableViewCellSegue"]) {
+        [SVProgressHUD showWithStatus:@"加载中..." maskType:SVProgressHUDMaskTypeGradient];
         NSUInteger row = [self.tableView indexPathForSelectedRow].row;
         PPFlickrPhotoInfo *photo = [datasource objectAtIndex:row];
         [PPFlickInterface loadImageForPhoto:photo thumbnail:NO completionBlock:^(UIImage *photoImage, NSError *error) {
             PPFlickrTableViewCell *cell = (PPFlickrTableViewCell *)sender;
-            UIViewController *detailController = segue.destinationViewController;
+            PPTableViewDetailViewController *detailController = segue.destinationViewController;
             detailController.title = cell.flickPhotoTitle.text;
             UIImageView *imageView = (UIImageView *)[detailController.view viewWithTag:1];
             imageView.image = photoImage;
+            detailController.photo = photo;
+            [SVProgressHUD dismiss];
         }];
     }
 }
