@@ -12,24 +12,45 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <collectionView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="4" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wkx-TZ-8xJ">
+                            <collectionView hidden="YES" opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wkx-TZ-8xJ">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ofs-kP-GPo">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="135" height="144"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="Pnx-aB-dCK">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="Pnx-aB-dCK" customClass="PPCollectionViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Kwv-HT-LMP">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="136" id="fmf-9w-zE3"/>
+                                                        <constraint firstAttribute="height" constant="136" id="g1f-b5-Thv"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="Kwv-HT-LMP" firstAttribute="centerY" secondItem="Pnx-aB-dCK" secondAttribute="centerY" type="default" id="Pdc-W6-QlP"/>
+                                            <constraint firstItem="Kwv-HT-LMP" firstAttribute="centerX" secondItem="Pnx-aB-dCK" secondAttribute="centerX" type="default" id="RZd-b1-i0m"/>
+                                        </constraints>
+                                        <size key="customSize" width="140" height="140"/>
+                                        <connections>
+                                            <outlet property="photoImageView" destination="Kwv-HT-LMP" id="sf4-im-7Sb"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="tY3-sp-gVy"/>
+                                    <outlet property="delegate" destination="2" id="UO6-fm-rse"/>
+                                </connections>
                             </collectionView>
                             <tableView clipsSubviews="YES" tag="3" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Fn5-jF-uhG">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -112,23 +133,26 @@
                                 <segment title="列表"/>
                                 <segment title="图表"/>
                             </segments>
+                            <connections>
+                                <action selector="segmentControlClick:" destination="2" eventType="valueChanged" id="Rjo-xT-kJ1"/>
+                            </connections>
                         </segmentedControl>
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="Add-a6-6Nl"/>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="wkx-TZ-8xJ" id="3hm-Lt-aYI"/>
                         <outlet property="segmentControl" destination="W5M-Rf-Jgd" id="5EZ-vS-Tgi"/>
                         <outlet property="tableView" destination="Fn5-jF-uhG" id="g5r-6W-e7R"/>
+                        <segue destination="6fr-Xk-ESB" kind="push" identifier="collectionViewSegue" id="KPx-s8-b7w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="601" y="-50"/>
         </scene>
-        <!--Table View Detail View Controller-->
+        <!--View Detail View Controller-->
         <scene sceneID="9XX-ii-ZPb">
             <objects>
-                <viewController id="6fr-Xk-ESB" customClass="PPTableViewDetailViewController" sceneMemberID="viewController">
+                <viewController id="6fr-Xk-ESB" customClass="PPViewDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WJZ-UV-LRN">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -160,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cM1-xR-eE8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="986" y="-40"/>
+            <point key="canvasLocation" x="1010" y="-50"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ktc-5H-uFS">
@@ -178,7 +202,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nFx-ue-6aF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="-50"/>
+            <point key="canvasLocation" x="191" y="-50"/>
         </scene>
     </scenes>
     <resources>
@@ -188,6 +212,12 @@
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
+        <class className="PPCollectionViewCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PPCollectionViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="photoImageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
         <class className="PPFlickrTableViewCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PPFlickrTableViewCell.h"/>
             <relationships>
@@ -195,19 +225,20 @@
                 <relationship kind="outlet" name="flickPhotoTitle" candidateClass="UILabel"/>
             </relationships>
         </class>
-        <class className="PPTableViewDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PPTableViewDetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="shareButtonClick:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="shareBtn" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
         <class className="PPViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PPViewController.h"/>
             <relationships>
+                <relationship kind="action" name="segmentControlClick:" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
                 <relationship kind="outlet" name="segmentControl" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="PPViewDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PPViewDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="shareButtonClick:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="shareBtn" candidateClass="UIBarButtonItem"/>
             </relationships>
         </class>
         <class className="UICollectionReusableView" superclassName="UIView">
@@ -228,4 +259,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="KPx-s8-b7w"/>
+    </inferredMetricsTieBreakers>
 </document>

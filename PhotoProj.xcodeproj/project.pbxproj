@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		624A650A171FC1ED00A69E9D /* PPTableViewDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 624A6509171FC1ED00A69E9D /* PPTableViewDetailViewController.m */; };
+		624A650A171FC1ED00A69E9D /* PPViewDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 624A6509171FC1ED00A69E9D /* PPViewDetailViewController.m */; };
 		624A650D171FC39100A69E9D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 624A650C171FC39100A69E9D /* Social.framework */; };
 		627A87C7171E2B9200E51ADB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 627A87C6171E2B9200E51ADB /* CFNetwork.framework */; };
 		627A87CA171E2B9A00E51ADB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 627A87C9171E2B9A00E51ADB /* SystemConfiguration.framework */; };
@@ -33,6 +33,8 @@
 		628CD55D171DA3CE007918E9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 628CD55C171DA3CE007918E9 /* Default-568h@2x.png */; };
 		628CD560171DA3CE007918E9 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 628CD55E171DA3CE007918E9 /* MainStoryboard.storyboard */; };
 		628CD563171DA3CE007918E9 /* PPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 628CD562171DA3CE007918E9 /* PPViewController.m */; };
+		62A40DAB1720027900586A28 /* PPCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A40DAA1720027900586A28 /* PPCollectionViewCell.m */; };
+		62A40DAF17200A7700586A28 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 62A40DAE17200A7700586A28 /* pin.png */; };
 		62AAA17A171E44D30068459C /* PPFlickrEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 62AAA179171E44D30068459C /* PPFlickrEngine.m */; };
 		62AAA17E171E453D0068459C /* PPFlickrPhotoInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 62AAA17D171E453D0068459C /* PPFlickrPhotoInfo.m */; };
 		62AAA181171E465B0068459C /* PPFlickInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 62AAA180171E465B0068459C /* PPFlickInterface.m */; };
@@ -43,8 +45,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		624A6508171FC1ED00A69E9D /* PPTableViewDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTableViewDetailViewController.h; sourceTree = "<group>"; };
-		624A6509171FC1ED00A69E9D /* PPTableViewDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTableViewDetailViewController.m; sourceTree = "<group>"; };
+		624A6508171FC1ED00A69E9D /* PPViewDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPViewDetailViewController.h; sourceTree = "<group>"; };
+		624A6509171FC1ED00A69E9D /* PPViewDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPViewDetailViewController.m; sourceTree = "<group>"; };
 		624A650C171FC39100A69E9D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		627A87C6171E2B9200E51ADB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		627A87C9171E2B9A00E51ADB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -86,6 +88,9 @@
 		628CD55F171DA3CE007918E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		628CD561171DA3CE007918E9 /* PPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPViewController.h; sourceTree = "<group>"; };
 		628CD562171DA3CE007918E9 /* PPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPViewController.m; sourceTree = "<group>"; };
+		62A40DA91720027900586A28 /* PPCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPCollectionViewCell.h; sourceTree = "<group>"; };
+		62A40DAA1720027900586A28 /* PPCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPCollectionViewCell.m; sourceTree = "<group>"; };
+		62A40DAE17200A7700586A28 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
 		62AAA178171E44D30068459C /* PPFlickrEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPFlickrEngine.h; sourceTree = "<group>"; };
 		62AAA179171E44D30068459C /* PPFlickrEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPFlickrEngine.m; sourceTree = "<group>"; };
 		62AAA17C171E453D0068459C /* PPFlickrPhotoInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPFlickrPhotoInfo.h; sourceTree = "<group>"; };
@@ -205,6 +210,7 @@
 		628CD54C171DA3CE007918E9 /* PhotoProj */ = {
 			isa = PBXGroup;
 			children = (
+				62A40DAD17200A6700586A28 /* images */,
 				628CD569171DA4A9007918E9 /* ThirdParty */,
 				627A87F0171E30E000E51ADB /* Utils */,
 				62AAA175171E44960068459C /* core */,
@@ -215,8 +221,10 @@
 				628CD562171DA3CE007918E9 /* PPViewController.m */,
 				62CB4708171EF4C7009128C0 /* PPFlickrTableViewCell.h */,
 				62CB4709171EF4C7009128C0 /* PPFlickrTableViewCell.m */,
-				624A6508171FC1ED00A69E9D /* PPTableViewDetailViewController.h */,
-				624A6509171FC1ED00A69E9D /* PPTableViewDetailViewController.m */,
+				624A6508171FC1ED00A69E9D /* PPViewDetailViewController.h */,
+				624A6509171FC1ED00A69E9D /* PPViewDetailViewController.m */,
+				62A40DA91720027900586A28 /* PPCollectionViewCell.h */,
+				62A40DAA1720027900586A28 /* PPCollectionViewCell.m */,
 				628CD54D171DA3CE007918E9 /* Supporting Files */,
 			);
 			path = PhotoProj;
@@ -243,6 +251,14 @@
 				627A87CD171E2C8800E51ADB /* MKNetworkKit */,
 			);
 			name = ThirdParty;
+			sourceTree = "<group>";
+		};
+		62A40DAD17200A6700586A28 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				62A40DAE17200A7700586A28 /* pin.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 		62AAA175171E44960068459C /* core */ = {
@@ -334,6 +350,7 @@
 				628CD55D171DA3CE007918E9 /* Default-568h@2x.png in Resources */,
 				628CD560171DA3CE007918E9 /* MainStoryboard.storyboard in Resources */,
 				62AAA18E171E993F0068459C /* SVProgressHUD.bundle in Resources */,
+				62A40DAF17200A7700586A28 /* pin.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +379,8 @@
 				62AAA181171E465B0068459C /* PPFlickInterface.m in Sources */,
 				62AAA18F171E993F0068459C /* SVProgressHUD.m in Sources */,
 				62CB470A171EF4C7009128C0 /* PPFlickrTableViewCell.m in Sources */,
-				624A650A171FC1ED00A69E9D /* PPTableViewDetailViewController.m in Sources */,
+				624A650A171FC1ED00A69E9D /* PPViewDetailViewController.m in Sources */,
+				62A40DAB1720027900586A28 /* PPCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

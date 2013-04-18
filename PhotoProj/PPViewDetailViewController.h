@@ -10,7 +10,7 @@
 
 #import "PPFlickrPhotoInfo.h"
 
-@interface PPTableViewDetailViewController : UIViewController
+@interface PPViewDetailViewController : UIViewController
 
 @property (nonatomic, strong) PPFlickrPhotoInfo *photo;
 

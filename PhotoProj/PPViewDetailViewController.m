@@ -6,15 +6,15 @@
 //  Copyright (c) 2013年 Kingiol. All rights reserved.
 //
 
-#import "PPTableViewDetailViewController.h"
+#import "PPViewDetailViewController.h"
 
-@interface PPTableViewDetailViewController ()
+@interface PPViewDetailViewController ()
 
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *shareBtn;
 
 @end
 
-@implementation PPTableViewDetailViewController
+@implementation PPViewDetailViewController
 
 @synthesize photo = _photo;
 
