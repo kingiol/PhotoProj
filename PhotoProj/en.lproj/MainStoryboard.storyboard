@@ -20,7 +20,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Pnx-aB-dCK">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="Pnx-aB-dCK">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -68,6 +68,7 @@
                                         <connections>
                                             <outlet property="flickPhotoImageView" destination="JSf-fa-ype" id="FwJ-gP-37x"/>
                                             <outlet property="flickPhotoTitle" destination="cFX-01-PaW" id="kDA-1b-6N9"/>
+                                            <segue destination="6fr-Xk-ESB" kind="push" identifier="tableViewCellSegue" id="5ys-3f-91l"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -114,12 +115,42 @@
                         </segmentedControl>
                     </navigationItem>
                     <connections>
+                        <outlet property="collectionView" destination="wkx-TZ-8xJ" id="3hm-Lt-aYI"/>
+                        <outlet property="segmentControl" destination="W5M-Rf-Jgd" id="5EZ-vS-Tgi"/>
                         <outlet property="tableView" destination="Fn5-jF-uhG" id="g5r-6W-e7R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="601" y="-50"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9XX-ii-ZPb">
+            <objects>
+                <viewController id="6fr-Xk-ESB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WJZ-UV-LRN">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" image="error.png" translatesAutoresizingMaskIntoConstraints="NO" id="VLj-A0-xVL">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="421" id="PxS-Bi-e65"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VLj-A0-xVL" firstAttribute="top" secondItem="WJZ-UV-LRN" secondAttribute="top" type="default" id="BUP-Y1-1JH"/>
+                            <constraint firstItem="VLj-A0-xVL" firstAttribute="leading" secondItem="WJZ-UV-LRN" secondAttribute="leading" type="default" id="OeS-kC-HXm"/>
+                            <constraint firstItem="VLj-A0-xVL" firstAttribute="trailing" secondItem="WJZ-UV-LRN" secondAttribute="trailing" type="default" id="RWj-mH-DNS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nue-hs-pk5"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cM1-xR-eE8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="986" y="-40"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ktc-5H-uFS">
@@ -140,6 +171,9 @@
             <point key="canvasLocation" x="137" y="-50"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="error.png" width="28" height="28"/>
+    </resources>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
@@ -154,6 +188,8 @@
         <class className="PPViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PPViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
+                <relationship kind="outlet" name="segmentControl" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
             </relationships>
         </class>
